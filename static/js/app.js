@@ -56,19 +56,45 @@ async function loadSpecializations() {
             return;
         }
 
-        // Get list of specialization files from server
-        const fileListResponse = await fetch('/specializations/');
-        if (!fileListResponse.ok) {
-            throw new Error(`Failed to get specialization list: HTTP ${fileListResponse.status}`);
-        }
-        
-        const specializationFiles = await fileListResponse.json();
-        
-        if (!Array.isArray(specializationFiles) || specializationFiles.length === 0) {
-            throw new Error('No specialization files available');
-        }
+        // Try to get list of specialization files from server
+        let specializationFiles = [];
+        try {
+            const fileListResponse = await fetch('/specializations/');
+            if (!fileListResponse.ok) {
+                throw new Error(`Failed to get specialization list: HTTP ${fileListResponse.status}`);
+            }
+            
+            specializationFiles = await fileListResponse.json();
+            
+            if (!Array.isArray(specializationFiles) || specializationFiles.length === 0) {
+                throw new Error('No specialization files available');
+            }
 
-        console.log(`Found ${specializationFiles.length} specialization files`);
+            console.log(`Found ${specializationFiles.length} specialization files via directory listing`);
+        } catch (directoryError) {
+            console.log('Directory listing failed, trying manifest.json fallback:', directoryError.message);
+            
+            // Try to load from manifest.json
+            try {
+                const manifestResponse = await fetch('/specializations/manifest.json');
+                if (!manifestResponse.ok) {
+                    throw new Error(`Failed to get manifest: HTTP ${manifestResponse.status}`);
+                }
+                
+                const manifest = await manifestResponse.json();
+                
+                if (!manifest.files || !Array.isArray(manifest.files)) {
+                    throw new Error('Invalid manifest structure - missing files array');
+                }
+                
+                specializationFiles = manifest.files;
+                console.log(`Found ${specializationFiles.length} specialization files via manifest.json`);
+                
+            } catch (manifestError) {
+                console.log('Manifest.json also failed, using hardcoded fallback:', manifestError.message);
+                throw new Error('Both directory listing and manifest.json failed');
+            }
+        }
 
         // Load each specialization file with enhanced error handling
         const loadPromises = specializationFiles.map(async (filename) => {
@@ -117,13 +143,9 @@ async function loadSpecializations() {
     } catch (error) {
         console.error('Error loading specializations:', error);
         
-        // Fallback to hardcoded list if server listing fails
-        if (error.message.includes('Failed to get specialization list')) {
-            console.log('Falling back to hardcoded specialization list');
-            await loadSpecializationsFallback();
-        } else {
-            throw error;
-        }
+        // Fallback to hardcoded list if all other methods fail
+        console.log('Falling back to hardcoded specialization list');
+        await loadSpecializationsFallback();
     }
 }
 
@@ -172,15 +194,34 @@ async function loadSpecializationFile(filename) {
  */
 async function loadSpecializationsFallback() {
     const fallbackFiles = [
-        'arms_warrior.json',
-        'fury_warrior.json', 
-        'protection_warrior.json',
-        'holy_paladin.json',
-        'protection_paladin.json',
-        'retribution_paladin.json',
-        'holy_priest.json',
-        'discipline_priest.json',
-        'shadow_priest.json'
+        'druid_balance.json',
+        'druid_feral.json',
+        'druid_guardian.json',
+        'druid_restoration.json',
+        'hunter_beastmastery.json',
+        'hunter_marksman.json',
+        'hunter_survival.json',
+        'mage_arcane.json',
+        'mage_fire.json',
+        'mage_frost.json',
+        'paladin_holy.json',
+        'paladin_protection.json',
+        'paladin_retribution.json',
+        'priest_discipline.json',
+        'priest_holy.json',
+        'priest_shadow.json',
+        'rogue_assassination.json',
+        'rogue_combat.json',
+        'rogue_subtlety.json',
+        'shaman_elemental.json',
+        'shaman_enhancement.json',
+        'shaman_restoration.json',
+        'warlock_affliction.json',
+        'warlock_demonology.json',
+        'warlock_destruction.json',
+        'warrior_arms.json',
+        'warrior_fury.json',
+        'warrior_protection.json'
     ];
 
     console.log('Using fallback file list:', fallbackFiles);
@@ -922,7 +963,7 @@ async function getValidIconPath(iconPath) {
     } catch (error) {
         console.warn(`Icon not found: ${iconPath}, using fallback`);
     }
-    return 'icons/invalid.png';
+    return 'raidicons/invalid.png';
 }
 
 /**

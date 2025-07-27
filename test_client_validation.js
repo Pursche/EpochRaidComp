@@ -21,7 +21,7 @@ eval(validatorScript);
 const validSpecialization = {
     name: "Arms Warrior",
     class: "Warrior",
-    icon_path: "icons/arms_warrior.png",
+            icon_path: "raidicons/arms_warrior.png",
     effects: [
         {
             name: "Battle Shout",
@@ -41,7 +41,7 @@ const invalidSpecialization = {
 const invalidEffectType = {
     name: "Test Spec",
     class: "Warrior",
-    icon_path: "icons/test.png",
+    icon_path: "raidicons/test.png",
     effects: [
         {
             name: "Invalid Effect",
@@ -55,7 +55,7 @@ const invalidEffectType = {
 const invalidEffectScope = {
     name: "Test Spec",
     class: "Warrior",
-    icon_path: "icons/test.png",
+    icon_path: "raidicons/test.png",
     effects: [
         {
             name: "Invalid Effect",
@@ -69,14 +69,14 @@ const invalidEffectScope = {
 const emptyStrings = {
     name: "", // Empty string
     class: "Warrior",
-    icon_path: "icons/test.png",
+    icon_path: "raidicons/test.png",
     effects: []
 };
 
 const wrongDataTypes = {
     name: 123, // Wrong type
     class: "Warrior",
-    icon_path: "icons/test.png",
+    icon_path: "raidicons/test.png",
     effects: []
 };
 

@@ -1,63 +1,63 @@
 {
   "name": "Survival Hunter",
   "class": "Hunter",
-  "icon_path": "icons/hunter/survival.png",
+  "icon_path": "raidicons/hunter/survival.png",
   "effects": [
     {
       "name": "Aspect of the Pack",
       "type": "buff",
       "scope": "raid",
       "description": "Increases movement speed by 40% for 8 seconds",
-      "icon_path": "icons/effects/aspect_of_the_pack.png"
+      "icon_path": "raidicons/effects/aspect_of_the_pack.png"
     },
     {
       "name": "Aspect of the Wild",
       "type": "buff",
       "scope": "raid",
       "description": "Increases Nature resistance by 60",
-      "icon_path": "icons/effects/aspect_of_the_wild.png"
+      "icon_path": "raidicons/effects/aspect_of_the_wild.png"
     },
     {
       "name": "Mana Burn",
       "type": "other",
       "scope": "raid",
       "description": "Burns the targets mana",
-      "icon_path": "icons/effects/mana_burn.png"
+      "icon_path": "raidicons/effects/mana_burn.png"
     },
     {
       "name": "Tranquilizing Shot",
       "type": "other",
       "scope": "raid",
       "description": "Remove Frenzy effect from the target",
-      "icon_path": "icons/effects/tranquilizing_shot.png"
+      "icon_path": "raidicons/effects/tranquilizing_shot.png"
     },
     {
       "name": "Misdirection",
       "type": "other",
       "scope": "raid",
       "description": "Transfers threat to friendly target",
-      "icon_path": "icons/effects/misdirection.png"
+      "icon_path": "raidicons/effects/misdirection.png"
     },
     {
       "name": "Freezing Trap",
       "type": "other",
       "scope": "raid",
       "description": "Encases target in ice preventing all action for 20 seconds",
-      "icon_path": "icons/effects/freezing_trap.png"
+      "icon_path": "raidicons/effects/freezing_trap.png"
     },
     {
       "name": "Frost Trap",
       "type": "other",
       "scope": "raid",
       "description": "60% slow to all enemies within 10 yards",
-      "icon_path": "icons/effects/frost_trap.png"
+      "icon_path": "raidicons/effects/frost_trap.png"
     },
     {
       "name": "Wyvern Sting",
       "type": "debuff",
       "scope": "raid",
       "description": "Put target to sleep for 12 seconds",
-      "icon_path": "icons/effects/wyvern_sting.png"
+      "icon_path": "raidicons/effects/wyvern_sting.png"
     }
   ]
 } 

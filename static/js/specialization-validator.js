@@ -45,8 +45,8 @@ function validateSpecializationData(specData) {
     if (specData.icon_path.length > 200) {
         return false;
     }
-    // Check icon path pattern: icons/[subfolder/]filename.(png|jpg|jpeg|svg)
-    const iconPathPattern = /^icons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
+    // Check icon path pattern: raidicons/[subfolder/]filename.(png|jpg|jpeg|svg)
+    const iconPathPattern = /^raidicons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
     if (!iconPathPattern.test(specData.icon_path)) {
         return false;
     }
@@ -105,8 +105,8 @@ function validateSpecializationData(specData) {
         if (effect.icon_path.length > 200) {
             return false;
         }
-        // Check effect icon path pattern: icons/[subfolder/]filename.(png|jpg|jpeg|svg)
-        const effectIconPathPattern = /^icons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
+        // Check effect icon path pattern: raidicons/[subfolder/]filename.(png|jpg|jpeg|svg)
+        const effectIconPathPattern = /^raidicons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
         if (!effectIconPathPattern.test(effect.icon_path)) {
             console.warn(`Effect "${effect.name}" has invalid icon path: ${effect.icon_path}`);
             // Don't fail validation, just warn - the fallback will handle it
@@ -167,8 +167,8 @@ function validateEffect(effect) {
     if (effect.icon_path.length > 200) {
         return false;
     }
-    // Check effect icon path pattern: icons/[subfolder/]filename.(png|jpg|jpeg|svg)
-    const effectIconPathPattern = /^icons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
+    // Check effect icon path pattern: raidicons/[subfolder/]filename.(png|jpg|jpeg|svg)
+    const effectIconPathPattern = /^raidicons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
     if (!effectIconPathPattern.test(effect.icon_path)) {
         console.warn(`Effect "${effect.name}" has invalid icon path: ${effect.icon_path}`);
         // Don't fail validation, just warn - the fallback will handle it
@@ -224,9 +224,9 @@ function getValidationErrors(specData) {
     } else if (specData.icon_path.length > 200) {
         errors.push('Icon path must be 200 characters or less');
     } else {
-        const iconPathPattern = /^icons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
+        const iconPathPattern = /^raidicons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
         if (!iconPathPattern.test(specData.icon_path)) {
-            errors.push('Icon path must follow pattern: icons/[subfolder/]filename.(png|jpg|jpeg|svg)');
+            errors.push('Icon path must follow pattern: raidicons/[subfolder/]filename.(png|jpg|jpeg|svg)');
         }
     }
 
@@ -247,9 +247,9 @@ function getValidationErrors(specData) {
                 } else if (effect.icon_path.length > 200) {
                     errors.push(`Effect "${effect.name}" at index ${index}: Icon path must be 200 characters or less`);
                 } else {
-                    const effectIconPathPattern = /^icons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
+                    const effectIconPathPattern = /^raidicons\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg)$/;
                     if (!effectIconPathPattern.test(effect.icon_path)) {
-                        console.warn(`Effect "${effect.name}" at index ${index}: Icon path doesn't follow pattern: icons/[subfolder/]filename.(png|jpg|jpeg|svg) - will use fallback`);
+                        console.warn(`Effect "${effect.name}" at index ${index}: Icon path doesn't follow pattern: raidicons/[subfolder/]filename.(png|jpg|jpeg|svg) - will use fallback`);
                         // Don't add to errors since we have fallback handling
                     }
                 }

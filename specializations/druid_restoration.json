@@ -1,84 +1,84 @@
 {
   "name": "Restoration Druid",
   "class": "Druid",
-  "icon_path": "icons/druid/restoration.png",
+  "icon_path": "raidicons/druid/restoration.png",
   "effects": [
     {
       "name": "Thorns",
       "type": "buff",
       "scope": "raid",
       "description": "18 Nature damage to attackers when hit",
-      "icon_path": "icons/effects/thorns.png"
+      "icon_path": "raidicons/effects/thorns.png"
     },
     {
       "name": "Gift of the Wild",
       "type": "buff",
       "scope": "raid",
       "description": "Increases armor by 285, all attributes by 12 and all resistances by 20",
-      "icon_path": "icons/effects/gift_of_the_wild.png"
+      "icon_path": "raidicons/effects/gift_of_the_wild.png"
     },
     {
       "name": "Innervate",
       "type": "buff",
       "scope": "raid",
       "description": "Increases the target's Spirit based mana regeneration by 400% and allows full mana regeneration while casting",
-      "icon_path": "icons/effects/innervate.png"
+      "icon_path": "raidicons/effects/innervate.png"
     },
     {
       "name": "Faerie Fire",
       "type": "debuff",
       "scope": "raid",
       "description": "Decreases the armor of the target by 485. While affected, the target cannot stealth or turn invisible",
-      "icon_path": "icons/effects/faerie_fire.png"
+      "icon_path": "raidicons/effects/faerie_fire.png"
     },
     {
       "name": "Cyclone",
       "type": "other",
       "scope": "raid",
       "description": "Tosses the enemy target into the air, preventing all action but making them invulnerable for up to 6 seconds. Only one target can be affected by your Cyclone at a time",
-      "icon_path": "icons/effects/cyclone.png"
+      "icon_path": "raidicons/effects/cyclone.png"
     },
     {
       "name": "Entangling Roots",
       "type": "other",
       "scope": "raid",
       "description": "Roots the target in place for 27 seconds. Damage caused may interrupt the effect. Only useable outdoors",
-      "icon_path": "icons/effects/entangling_roots.png"
+      "icon_path": "raidicons/effects/entangling_roots.png"
     },
     {
       "name": "Hibernate",
       "type": "other",
       "scope": "raid",
       "description": "Forces the enemy target to sleep for up to 40 seconds. Any damage will awaken the target. Only one target can be forced to hibernate at a time. Only works on Beasts and Dragonkin",
-      "icon_path": "icons/effects/hibernate.png"
+      "icon_path": "raidicons/effects/hibernate.png"
     },
     {
       "name": "Soothe Animal",
       "type": "other",
       "scope": "raid",
       "description": "Soothes the target beast, reducing the range at which it will attack you by 10 yards. Only affects Beast targets level 70 or lower. Lasts 15 seconds",
-      "icon_path": "icons/effects/soothe_animal.png"
+      "icon_path": "raidicons/effects/soothe_animal.png"
     },
     {
       "name": "Tranquility",
       "type": "other",
       "scope": "raid",
       "description": "Heals up to 5 injured allies within your party or raid group for 1097 every 2 seconds seconds for 8 seconds. Druid must channel to maintain the spell",
-      "icon_path": "icons/effects/tranquility.png"
+      "icon_path": "raidicons/effects/tranquility.png"
     },
     {
       "name": "Dispell Curse",
       "type": "other",
       "scope": "raid",
       "description": "Dispells curses",
-      "icon_path": "icons/effects/dispell_curse.png"
+      "icon_path": "raidicons/effects/dispell_curse.png"
     },
     {
       "name": "Dispell Poison",
       "type": "other",
       "scope": "raid",
       "description": "Dispells poisons",
-      "icon_path": "icons/effects/dispell_poison.png"
+      "icon_path": "raidicons/effects/dispell_poison.png"
     }
   ]
 } 

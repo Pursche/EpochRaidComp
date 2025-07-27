@@ -96,8 +96,13 @@ def list_specializations():
 # Configure Flask to serve icon files from subdirectories
 @app.route('/icons/<path:filename>')
 def serve_icon(filename):
-    """Serve icon files from static/icons directory"""
-    return send_from_directory('static/icons', filename)
+    """Serve icon files from static/raidicons directory (legacy route)"""
+    return send_from_directory('static/raidicons', filename)
+
+@app.route('/raidicons/<path:filename>')
+def serve_raidicon(filename):
+    """Serve icon files from static/raidicons directory"""
+    return send_from_directory('static/raidicons', filename)
 
 @app.route('/')
 def index():

@@ -65,7 +65,7 @@
     {
       "name": "Holy Paladin",
       "class": "Paladin",
-      "icon_path": "icons/holy_paladin.png",
+      "icon_path": "raidicons/holy_paladin.png",
       "effects": [
         {
           "name": "Blessing of Kings",

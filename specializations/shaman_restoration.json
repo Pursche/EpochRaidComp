@@ -1,154 +1,154 @@
 {
   "name": "Restoration Shaman",
   "class": "Shaman",
-  "icon_path": "icons/shaman/restoration.png",
+  "icon_path": "raidicons/shaman/restoration.png",
   "effects": [
     {
       "name": "Earthbind Totem",
       "type": "debuff",
       "scope": "raid",
       "description": "Slows the movement speed of enemies within 10 yards",
-      "icon_path": "icons/effects/earthbind_totem.png"
+      "icon_path": "raidicons/effects/earthbind_totem.png"
     },
     {
       "name": "Grace of Air Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Increases agility by 54",
-      "icon_path": "icons/effects/grace_of_air_totem.png"
+      "icon_path": "raidicons/effects/grace_of_air_totem.png"
     },
     {
       "name": "Wrath of Air Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Increases spell damage and healing by up to 58",
-      "icon_path": "icons/effects/wrath_of_air_totem.png"
+      "icon_path": "raidicons/effects/wrath_of_air_totem.png"
     },
     {
       "name": "Nature Resistance Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Increases nature resistance by 60",
-      "icon_path": "icons/effects/nature_resistance_totem.png"
+      "icon_path": "raidicons/effects/nature_resistance_totem.png"
     },
     {
       "name": "Fire Resistance Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Increases fire resistance by 60",
-      "icon_path": "icons/effects/fire_resistance_totem.png"
+      "icon_path": "raidicons/effects/fire_resistance_totem.png"
     },
     {
       "name": "Frost Resistance Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Increases frost resistance by 60",
-      "icon_path": "icons/effects/frost_resistance_totem.png"
+      "icon_path": "raidicons/effects/frost_resistance_totem.png"
     },
     {
       "name": "Stoneskin Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Reduces melee damage taken by 30",
-      "icon_path": "icons/effects/stoneskin_totem.png"
+      "icon_path": "raidicons/effects/stoneskin_totem.png"
     },
     {
       "name": "Windwall Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Reduces ranged damage taken by 64",
-      "icon_path": "icons/effects/windwall_totem.png"
+      "icon_path": "raidicons/effects/windwall_totem.png"
     },
     {
       "name": "Strength of Earth Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Increases strength by 52",
-      "icon_path": "icons/effects/strength_of_earth_totem.png"
+      "icon_path": "raidicons/effects/strength_of_earth_totem.png"
     },
     {
       "name": "Windfury Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Each hit has a 20% chance of granting the attacker 1 extra attack with 220 extra melee attack power",
-      "icon_path": "icons/effects/windfury_totem.png"
+      "icon_path": "raidicons/effects/windfury_totem.png"
     },
     {
       "name": "Flametongue Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Increases total spell damage by 34",
-      "icon_path": "icons/effects/flametongue_totem.png"
+      "icon_path": "raidicons/effects/flametongue_totem.png"
     },
     {
       "name": "Mana Spring Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Restores 17 mana every 2 seconds",
-      "icon_path": "icons/effects/mana_spring_totem.png"
+      "icon_path": "raidicons/effects/mana_spring_totem.png"
     },
     {
       "name": "Mana Tide Totem",
       "type": "buff",
       "scope": "group",
       "description": "Restores 6% of total mana every 3 seconds",
-      "icon_path": "icons/effects/mana_tide_totem.png"
+      "icon_path": "raidicons/effects/mana_tide_totem.png"
     },
     {
       "name": "Tranquil Air Totem",
       "type": "buff",
       "scope": "raid",
       "description": "Reduces threat caused by 20%",
-      "icon_path": "icons/effects/mana_tide_totem.png"
+      "icon_path": "raidicons/effects/mana_tide_totem.png"
     },
     {
       "name": "Tremor Totem",
       "type": "buff",
       "scope": "group",
       "description": "Removes Fear, Charm and Sleep effects",
-      "icon_path": "icons/effects/mana_tide_totem.png"
+      "icon_path": "raidicons/effects/mana_tide_totem.png"
     },
     {
       "name": "Grounding Totem",
       "type": "other",
       "scope": "raid",
       "description": "Will redirect one harmful spell cast on a nearby party member to itself, destroying the totem",
-      "icon_path": "icons/effects/grounding_totem.png"
+      "icon_path": "raidicons/effects/grounding_totem.png"
     },
     {
       "name": "Bloodlust/Heroism",
       "type": "buff",
       "scope": "raid",
       "description": "Increases melee, ranged, and spell casting speed by 30% for all party and raid members. Lasts 40 seconds. Allies receiving this effect will become Sated and unable to benefit from Bloodlust or Heroism again for 10 min.",
-      "icon_path": "icons/effects/bloodlust.png"
+      "icon_path": "raidicons/effects/bloodlust.png"
     },
     {
       "name": "Soothe Elemental",
       "type": "other",
       "scope": "raid",
       "description": "Soothes the target elemental, reducing the range at which it will attack you by 10 yards. Only affects Elemental targets level 70 or lower. Lasts 15 seconds.",
-      "icon_path": "icons/effects/soothe_elemental.png"
+      "icon_path": "raidicons/effects/soothe_elemental.png"
     },
     {
       "name": "Purge",
       "type": "other",
       "scope": "raid",
       "description": "Purges an enemy, removing beneficial magic effects",
-      "icon_path": "icons/effects/purge.png"
+      "icon_path": "raidicons/effects/purge.png"
     },
     {
       "name": "Dispell Poison",
       "type": "other",
       "scope": "raid",
       "description": "Dispells poisons",
-      "icon_path": "icons/effects/dispell_poison.png"
+      "icon_path": "raidicons/effects/dispell_poison.png"
     },
     {
       "name": "Dispell Disease",
       "type": "other",
       "scope": "raid",
       "description": "Dispells disease",
-      "icon_path": "icons/effects/dispell_disease.png"
+      "icon_path": "raidicons/effects/dispell_disease.png"
     }
   ]
 } 

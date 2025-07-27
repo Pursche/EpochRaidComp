@@ -1,84 +1,84 @@
 {
   "name": "Destruction Warlock",
   "class": "Warlock",
-  "icon_path": "icons/warlock/destruction.png",
+  "icon_path": "raidicons/warlock/destruction.png",
   "effects": [
     {
       "name": "Bane of Exhaustion",
       "type": "debuff",
       "scope": "raid",
       "description": "Reduces the target's movement speed by 30% for 12 seconds. Only one Bane per Warlock can be active on any one target",
-      "icon_path": "icons/effects/bane_of_exhaustion.png"
+      "icon_path": "raidicons/effects/bane_of_exhaustion.png"
     },
     {
       "name": "Bane of Tongues",
       "type": "debuff",
       "scope": "raid",
       "description": "Forces the target to speak in Demonic, increasing the casting time of all spells by 50%. Only one Bane per Warlock can be active on any one target. Lasts 30 seconds",
-      "icon_path": "icons/effects/bane_of_tongues.png"
+      "icon_path": "raidicons/effects/bane_of_tongues.png"
     },
     {
       "name": "Curse of Recklessness",
       "type": "debuff",
       "scope": "raid",
       "description": "Curses the target with recklessness, increasing melee attack power by 90 but reducing armor by 600 for 120 seconds. Cursed enemies will not flee and will ignore Fear and Horror effects. Only one Curse per Warlock can be active on any one target.",
-      "icon_path": "icons/effects/curse_of_recklessness.png"
+      "icon_path": "raidicons/effects/curse_of_recklessness.png"
     },
     {
       "name": "Curse of the Elements",
       "type": "debuff",
       "scope": "raid",
       "description": "Curses the target for 300 seconds, reducing Nature, Arcane, Fire, Frost, and Shadow resistances by 75 and increasing Nature, Arcane, Fire, Frost, and Shadow damage taken by 10%. Only one Curse per Warlock can be active on any one target.",
-      "icon_path": "icons/effects/curse_of_the_elements.png"
+      "icon_path": "raidicons/effects/curse_of_the_elements.png"
     },
     {
       "name": "Curse of Weakness",
       "type": "debuff",
       "scope": "raid",
       "description": "Target's melee attack power is reduced by 163 for 120 seconds. Only one Curse per Warlock can be active on any one target.",
-      "icon_path": "icons/effects/curse_of_weakness.png"
+      "icon_path": "raidicons/effects/curse_of_weakness.png"
     },
     {
       "name": "Mana Burn",
       "type": "other",
       "scope": "raid",
       "description": "Burns the targets mana",
-      "icon_path": "icons/effects/mana_burn.png"
+      "icon_path": "raidicons/effects/mana_burn.png"
     },
     {
       "name": "Fear",
       "type": "debuff",
       "scope": "raid",
       "description": "Strikes fear in the enemy, causing it to run in fear for up to 20 seconds. Damage caused may interrupt the effect. Only 1 target can be feared at a time",
-      "icon_path": "icons/effects/fear.png"
+      "icon_path": "raidicons/effects/fear.png"
     },
     {
       "name": "Howl of Terror",
       "type": "debuff",
       "scope": "raid",
       "description": "Howl, causing 5 enemies within 10 yds to flee in terror for 8 seconds. Damage caused may interrupt the effect",
-      "icon_path": "icons/effects/howl_of_terror.png"
+      "icon_path": "raidicons/effects/howl_of_terror.png"
     },
     {
       "name": "Banish",
       "type": "debuff",
       "scope": "raid",
       "description": "Banishes the enemy target, preventing all action but making it invulnerable for up to 30 seconds. Only one target can be banished at a time. Only works on Demons and Elementals",
-      "icon_path": "icons/effects/banish.png"
+      "icon_path": "raidicons/effects/banish.png"
     },
     {
       "name": "Health Stone",
       "type": "other",
       "scope": "raid",
       "description": "Creates a Major Healthstone that can be used to instantly restore 1200 health",
-      "icon_path": "icons/effects/health_stone.png"
+      "icon_path": "raidicons/effects/health_stone.png"
     },
     {
       "name": "Soulstone",
       "type": "other",
       "scope": "raid",
       "description": "Creates a Major Soulstone. The Soulstone can be used to store one target's soul. If the target dies while their soul is stored, they will be able to resurrect with 2200 health and 2800 mana",
-      "icon_path": "icons/effects/soulstone.png"
+      "icon_path": "raidicons/effects/soulstone.png"
     }
   ]
 } 
