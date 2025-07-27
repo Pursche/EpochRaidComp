@@ -1,0 +1,119 @@
+{
+  "name": "Shadow Priest",
+  "class": "Priest",
+  "icon_path": "icons/priest/shadow.png",
+  "effects": [
+    {
+      "name": "Divine Spirit",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases Spirit by 30",
+      "icon_path": "icons/effects/divine_spirit.png"
+    },
+    {
+      "name": "Power Word: Fortitude",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases Stamina by 54",
+      "icon_path": "icons/effects/power_word_fortitude.png"
+    },
+    {
+      "name": "Shadow Protection",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases the target's resistance to Shadow spells by 60",
+      "icon_path": "icons/effects/shadow_protection.png"
+    },
+    {
+      "name": "Fear Ward",
+      "type": "buff",
+      "scope": "raid",
+      "description": "The next Fear effect used against the target will fail, using up the ward.",
+      "icon_path": "icons/effects/fear_ward.png"
+    },
+    {
+      "name": "Pain Supression",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Instantly reduces a friendly target's threat by 5%, reduces all damage taken by 40% and increases resistance to Dispel mechanics by 65% for 8 seconds.",
+      "icon_path": "icons/effects/pain_suppression.png"
+    },
+    {
+      "name": "Power Infusion",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Infuses the target with power, increasing spell casting speed by 20% and reducing the mana cost of all spells by 20%. Lasts 15 seconds.",
+      "icon_path": "icons/effects/power_infusion.png"
+    },
+    {
+      "name": "Power Word: Barrier",
+      "type": "other",
+      "scope": "raid",
+      "description": "Create a barrier around you, absorbing damage dealt to all party and raid members within it. The barrier lasts for 10 seconds or until it absorbs 5962 damage, increased by up to 250% when affecting a large group. Priest must channel to maintain the spell.",
+      "icon_path": "icons/effects/power_word_barrier.png"
+    },
+    {
+      "name": "Mana Burn",
+      "type": "other",
+      "scope": "raid",
+      "description": "Burns the targets mana",
+      "icon_path": "icons/effects/mana_burn.png"
+    },
+    {
+      "name": "Mass Dispell",
+      "type": "other",
+      "scope": "raid",
+      "description": "Dispels magic in a 15 yard radius, removing 1 harmful spell:spells; from each friendly target and 1 beneficial spell:spells; from each enemy target. Affects a maximum of 10 friendly targets and 10 enemy targets. This dispel is potent enough to remove Magic effects that are normally undispellable",
+      "icon_path": "icons/effects/mass_dispell.png"
+    },
+    {
+      "name": "Dispell Magic",
+      "type": "other",
+      "scope": "raid",
+      "description": "Dispells magic effect",
+      "icon_path": "icons/effects/dispell_curse.png"
+    },
+    {
+      "name": "Dispell Disease",
+      "type": "other",
+      "scope": "raid",
+      "description": "Dispells disease",
+      "icon_path": "icons/effects/dispell_disease.png"
+    },
+    {
+      "name": "Mind Soothe",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Soothes the target, reducing the range at which it will attack you by 10 yards. Only affects Humanoid targets level 63 or lower. Lasts 15 seconds.",
+      "icon_path": "icons/effects/mind_soothe.png"
+    },
+    {
+      "name": "Mind Control",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Controls a humanoid mind up to level 64, but increases the time between attacks by 25%. Lasts up to 60 seconds.",
+      "icon_path": "icons/effects/mind_control.png"
+    },
+    {
+      "name": "Silence",
+      "type": "other",
+      "scope": "raid",
+      "description": "Silences the target",
+      "icon_path": "icons/effects/silence.png"
+    },
+    {
+      "name": "Vampiric Embrace",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Afflicts your target with Shadow energy that causes all party members to be healed for 15% of any Shadow spell damage you deal for 60 seconds.",
+      "icon_path": "icons/effects/vampiric_embrace.png"
+    },
+    {
+      "name": "Vampiric Touch",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Causes all party members to gain mana equal to 5% of any Shadow spell damage you deal.",
+      "icon_path": "icons/effects/vampiric_touch.png"
+    }
+  ]
+} 

@@ -1,0 +1,1046 @@
+/* Reset and Normalize CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 3px solid #ffd700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    opacity: 0.9;
+}
+
+/* Header Controls */
+.header-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.header-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    text-align: center;
+}
+
+.header-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.header-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-btn.save-btn {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+.header-btn.save-btn:hover:not(:disabled) {
+    background: rgba(76, 175, 80, 0.3);
+    border-color: rgba(76, 175, 80, 0.6);
+}
+
+.header-btn.load-btn {
+    background: rgba(33, 150, 243, 0.2);
+    border-color: rgba(33, 150, 243, 0.4);
+}
+
+.header-btn.load-btn:hover:not(:disabled) {
+    background: rgba(33, 150, 243, 0.3);
+    border-color: rgba(33, 150, 243, 0.6);
+}
+
+.header-btn.clear-btn {
+    background: rgba(255, 152, 0, 0.2);
+    border-color: rgba(255, 152, 0, 0.4);
+}
+
+.header-btn.clear-btn:hover:not(:disabled) {
+    background: rgba(255, 152, 0, 0.3);
+    border-color: rgba(255, 152, 0, 0.6);
+}
+
+.header-btn.clear-saved-btn {
+    background: rgba(244, 67, 54, 0.2);
+    border-color: rgba(244, 67, 54, 0.4);
+}
+
+.header-btn.clear-saved-btn:hover:not(:disabled) {
+    background: rgba(244, 67, 54, 0.3);
+    border-color: rgba(244, 67, 54, 0.6);
+}
+
+.header-status {
+    color: #cccccc;
+    font-size: 0.9rem;
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Layout */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 2100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Section Styles */
+section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+/* Specializations Section */
+#specializations-section {
+    grid-column: 1;
+}
+
+#specializations-container {
+    min-height: 200px;
+    position: relative;
+}
+
+/* Add a subtle gradient overlay to indicate scrollable content (only on mobile/tablet) */
+@media (max-width: 1200px) {
+    #specializations-container::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background: linear-gradient(transparent, rgba(26, 26, 46, 0.8));
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    #specializations-container.has-scroll::after {
+        opacity: 1;
+    }
+}
+
+/* Specializations List */
+.specializations-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+/* Custom scrollbar for specializations list (only on mobile/tablet) */
+@media (max-width: 1200px) {
+    .specializations-list {
+        max-height: 600px;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+    
+    .specializations-list::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    .specializations-list::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+    
+    .specializations-list::-webkit-scrollbar-thumb {
+        background: rgba(255, 215, 0, 0.5);
+        border-radius: 4px;
+    }
+    
+    .specializations-list::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 215, 0, 0.7);
+    }
+}
+
+.specialization-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    cursor: grab;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.specialization-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.specialization-card:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+/* JavaScript-created tooltip */
+.specialization-tooltip {
+    background: rgba(0, 0, 0, 0.95);
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    white-space: pre-line;
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tooltip-section {
+    margin-bottom: 1rem;
+}
+
+.tooltip-section:last-child {
+    margin-bottom: 0;
+}
+
+.tooltip-section h4 {
+    color: #ffd700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 0.25rem;
+}
+
+.tooltip-effect {
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-effect:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.spec-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+}
+
+.spec-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+.spec-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.spec-header h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.effect-count {
+    color: #cccccc;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.effect-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+}
+
+/* Loading States */
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    color: #cccccc;
+}
+
+.loading-message h3 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 215, 0, 0.3);
+    border-top: 3px solid #ffd700;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error States */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.error-message h3 {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.retry-btn, .reload-btn {
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    color: #ffd700;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.retry-btn:hover, .reload-btn:hover {
+    background: rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.7);
+}
+
+.error-details {
+    margin-top: 1rem;
+    opacity: 0.7;
+}
+
+.error-details small {
+    color: #cccccc;
+}
+
+/* Groups Section */
+#groups-section {
+    grid-column: 2;
+    z-index: 1;
+}
+
+#groups-container {
+    min-height: 400px;
+}
+
+/* Group Structure Styles */
+#groups-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.group {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+}
+
+.group-title {
+    color: #ffd700;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.group-slots {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.group-effects {
+    font-size: 0.7rem;
+    color: #666;
+    padding: 0.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    margin-top: auto;
+}
+
+.group-effects-label {
+    font-weight: bold;
+    color: #cccccc;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.group-effects-content {
+    color: #888888;
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.effect-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: help;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.effect-icon:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.effect-icon.effect-buff {
+    border-color: rgba(76, 175, 80, 0.5);
+}
+
+.effect-icon.effect-debuff {
+    border-color: rgba(244, 67, 54, 0.5);
+}
+
+.effect-icon.effect-other {
+    border-color: rgba(255, 193, 7, 0.5);
+}
+
+/* Effect Icon Tooltip */
+.effect-icon-tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    max-width: 300px;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.effect-icon-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.effect-icon-tooltip .tooltip-name {
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 0.25rem;
+}
+
+.effect-icon-tooltip .tooltip-description {
+    color: #cccccc;
+    font-size: 0.75rem;
+}
+
+.effect-icon-tooltip .tooltip-section-header {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.effect-icon-tooltip .tooltip-section-header:first-child {
+    margin-top: 0;
+}
+
+.effect-icon-tooltip .tooltip-effect-item {
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.effect-icon-tooltip .tooltip-section-spacer {
+    height: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.slot {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.slot:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.slot.drag-over {
+    background-color: #f0f8ff;
+    border: 2px dashed #4682b4;
+    transform: scale(1.05);
+}
+
+.specialization-assigned {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #4682b4;
+    border-radius: 5px;
+    background-size: cover;
+    position: relative;
+}
+
+.remove-spec {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.specialization-assigned:hover .remove-spec {
+    display: block;
+}
+
+/* Effect Items */
+.effect-item {
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Two-column layout for effects */
+.effects-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.effects-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.effect-active {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border-left: 3px solid #4caf50;
+}
+
+.effect-inactive {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border-left: 3px solid #f44336;
+}
+
+.effect-source {
+    font-style: italic;
+    opacity: 0.7;
+    margin-left: 0.5rem;
+}
+
+/* Effect Info Icon */
+.effect-info-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #4682b4;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    cursor: help;
+    margin-left: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.effect-info-icon:hover {
+    background-color: #5a9bd4;
+    transform: scale(1.1);
+}
+
+.effect-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.effect-header strong {
+    flex-grow: 1;
+}
+
+/* Effects Section */
+#effects-section {
+    grid-column: 3;
+    z-index: 1;
+}
+
+#effects-container {
+    min-height: 200px;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+/* Loading States */
+p {
+    color: #cccccc;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    #specializations-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    #groups-section {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    #effects-section {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+    
+    /* Switch to single column for specializations on medium screens */
+    .specializations-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Highlighting System */
+.highlight-effect {
+    background: rgba(255, 215, 0, 0.3) !important;
+    border-color: rgba(255, 215, 0, 0.8) !important;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5) !important;
+    transform: scale(1.05) !important;
+    transition: all 0.2s ease !important;
+}
+
+.highlight-spec {
+    background: rgba(255, 215, 0, 0.3) !important;
+    border-color: rgba(255, 215, 0, 0.8) !important;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5) !important;
+    transform: scale(1.05) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Wrapper elements for highlighting */
+.spec-wrapper {
+    display: inline-block; /* Changed from contents to inline-block so highlighting is visible */
+    position: relative;
+}
+
+.effect-icon-wrapper {
+    display: inline-block; /* Keep the wrapper inline with other effect icons */
+}
+
+/* Remove the blue and purple highlights for group/raid effects - keep their existing hover effects */
+.highlight-group-effect {
+    /* Remove this class - we don't want to highlight group effects themselves */
+}
+
+.highlight-raid-effect {
+    /* Remove this class - we don't want to highlight raid effects themselves */
+}
+
+/* Dimming effect for non-highlighted elements */
+.dimmed {
+    opacity: 0.3 !important;
+    filter: grayscale(50%) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Remove dimming when hovering over highlighted elements */
+.highlight-effect:hover,
+.highlight-spec:hover,
+.highlight-group-effect:hover,
+.highlight-raid-effect:hover {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    #specializations-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    #groups-section {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #effects-section {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    #groups-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .group {
+        padding: 0.5rem;
+    }
+    
+    .group-slots {
+        gap: 0.2rem;
+    }
+    
+    .slot {
+        min-height: 40px;
+    }
+    
+    .specialization-assigned {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* Ensure single column layout for specializations on mobile */
+    .specializations-list {
+        grid-template-columns: 1fr;
+        max-height: 400px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0.5rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    header {
+        padding: 1rem 0;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Hover Effects */
+section:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Focus States for Accessibility */
+section:focus-within {
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+/* Smooth Transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Composition Management UI Styles */
+.composition-controls {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem;
+}
+
+.composition-controls-header h3 {
+    color: #ffd700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.composition-controls-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.composition-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    text-align: center;
+}
+
+.composition-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.composition-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.composition-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.composition-btn.save-btn {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+.composition-btn.save-btn:hover:not(:disabled) {
+    background: rgba(76, 175, 80, 0.3);
+    border-color: rgba(76, 175, 80, 0.6);
+}
+
+.composition-btn.load-btn {
+    background: rgba(33, 150, 243, 0.2);
+    border-color: rgba(33, 150, 243, 0.4);
+}
+
+.composition-btn.load-btn:hover:not(:disabled) {
+    background: rgba(33, 150, 243, 0.3);
+    border-color: rgba(33, 150, 243, 0.6);
+}
+
+.composition-btn.clear-btn {
+    background: rgba(255, 152, 0, 0.2);
+    border-color: rgba(255, 152, 0, 0.4);
+}
+
+.composition-btn.clear-btn:hover:not(:disabled) {
+    background: rgba(255, 152, 0, 0.3);
+    border-color: rgba(255, 152, 0, 0.6);
+}
+
+.composition-btn.clear-saved-btn {
+    background: rgba(244, 67, 54, 0.2);
+    border-color: rgba(244, 67, 54, 0.4);
+}
+
+.composition-btn.clear-saved-btn:hover:not(:disabled) {
+    background: rgba(244, 67, 54, 0.3);
+    border-color: rgba(244, 67, 54, 0.6);
+}
+
+.composition-status {
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.composition-status span {
+    color: #cccccc;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Responsive design for header controls */
+@media (max-width: 768px) {
+    .header-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .header-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .header-status {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-controls {
+        gap: 0.25rem;
+    }
+    
+    .header-btn {
+        min-width: 70px;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .header-status {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+} 

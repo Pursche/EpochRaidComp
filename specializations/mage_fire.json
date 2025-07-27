@@ -1,0 +1,56 @@
+{
+  "name": "Fire Mage",
+  "class": "Mage",
+  "icon_path": "icons/mage/fire.png",
+  "effects": [
+    {
+      "name": "Arcane Intellect",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases intellect by 31 for all raid members",
+      "icon_path": "icons/effects/arcane_intellect.png"
+    },
+    {
+      "name": "Amplify Magic",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases damage taken from spells by up to 75 and healing spells by up to 150",
+      "icon_path": "icons/effects/amplify_magic.png"
+    },
+    {
+      "name": "Dampen Magic",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Decreasing damage taken from spells by up to 90 and healing spells by up to 180",
+      "icon_path": "icons/effects/amplify_magic.png"
+    },
+    {
+      "name": "Silence",
+      "type": "other",
+      "scope": "raid",
+      "description": "Silences the target",
+      "icon_path": "icons/effects/silence.png"
+    },
+    {
+      "name": "Polymorph",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Transforms the enemy into a sheep, forcing it to wander around for up to 50 seconds. While wandering, the sheep cannot attack or cast spells but will regenerate very quickly. Any damage will transform the target back into its normal form. Only one target can be polymorphed at a time. Only works on Beasts, Humanoids and Critters",
+      "icon_path": "icons/effects/polymorph.png"
+    },
+    {
+      "name": "Dispell Curse",
+      "type": "other",
+      "scope": "raid",
+      "description": "Dispells curses",
+      "icon_path": "icons/effects/dispell_curse.png"
+    },
+    {
+      "name": "Spellsteal",
+      "type": "other",
+      "scope": "raid",
+      "description": "Steals a beneficial magic effect from the target",
+      "icon_path": "icons/effects/spellsteal.png"
+    }
+  ]
+} 

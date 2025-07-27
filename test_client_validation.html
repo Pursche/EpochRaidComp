@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client-Side Validation Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .pass { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .fail { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .error { background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+    </style>
+</head>
+<body>
+    <h1>Client-Side Validation Test</h1>
+    <div id="test-results"></div>
+
+    <script src="static/js/specialization-validator.js"></script>
+    <script>
+        const testResults = document.getElementById('test-results');
+        
+        function logResult(testName, passed, message = '') {
+            const div = document.createElement('div');
+            div.className = `test-result ${passed ? 'pass' : 'fail'}`;
+            div.innerHTML = `<strong>${testName}:</strong> ${passed ? 'PASS' : 'FAIL'} ${message}`;
+            testResults.appendChild(div);
+        }
+
+        function testValidSpecialization() {
+            const validSpec = {
+                name: "Arms Warrior",
+                class: "Warrior",
+                icon_path: "icons/arms_warrior.png",
+                effects: [
+                    {
+                        name: "Battle Shout",
+                        type: "buff",
+                        scope: "raid",
+                        description: "Increases attack power by 185 for all raid members"
+                    }
+                ]
+            };
+            
+            const result = window.SpecializationValidator.validateSpecializationData(validSpec);
+            logResult('Valid Specialization', result);
+            return result;
+        }
+
+        function testInvalidSpecialization() {
+            const invalidSpec = {
+                name: "Invalid Spec",
+                class: "Warrior",
+                // Missing icon_path and effects
+            };
+            
+            const result = !window.SpecializationValidator.validateSpecializationData(invalidSpec);
+            logResult('Invalid Specialization (Missing Fields)', result);
+            return result;
+        }
+
+        function testInvalidEffectType() {
+            const invalidSpec = {
+                name: "Test Spec",
+                class: "Warrior",
+                icon_path: "icons/test.png",
+                effects: [
+                    {
+                        name: "Invalid Effect",
+                        type: "invalid_type", // Invalid type
+                        scope: "raid",
+                        description: "This should fail"
+                    }
+                ]
+            };
+            
+            const result = !window.SpecializationValidator.validateSpecializationData(invalidSpec);
+            logResult('Invalid Effect Type', result);
+            return result;
+        }
+
+        function testInvalidEffectScope() {
+            const invalidSpec = {
+                name: "Test Spec",
+                class: "Warrior",
+                icon_path: "icons/test.png",
+                effects: [
+                    {
+                        name: "Invalid Effect",
+                        type: "buff",
+                        scope: "invalid_scope", // Invalid scope
+                        description: "This should fail"
+                    }
+                ]
+            };
+            
+            const result = !window.SpecializationValidator.validateSpecializationData(invalidSpec);
+            logResult('Invalid Effect Scope', result);
+            return result;
+        }
+
+        function testEmptyStrings() {
+            const invalidSpec = {
+                name: "", // Empty string
+                class: "Warrior",
+                icon_path: "icons/test.png",
+                effects: []
+            };
+            
+            const result = !window.SpecializationValidator.validateSpecializationData(invalidSpec);
+            logResult('Empty Name String', result);
+            return result;
+        }
+
+        function testWrongDataTypes() {
+            const invalidSpec = {
+                name: 123, // Wrong type
+                class: "Warrior",
+                icon_path: "icons/test.png",
+                effects: []
+            };
+            
+            const result = !window.SpecializationValidator.validateSpecializationData(invalidSpec);
+            logResult('Wrong Data Types', result);
+            return result;
+        }
+
+        function testValidationErrors() {
+            const invalidSpec = {
+                name: "",
+                class: "Warrior",
+                icon_path: "icons/test.png",
+                effects: []
+            };
+            
+            const errors = window.SpecializationValidator.getValidationErrors(invalidSpec);
+            const hasErrors = errors.length > 0;
+            logResult('Validation Error Messages', hasErrors, `(${errors.length} errors found)`);
+            return hasErrors;
+        }
+
+        function runAllTests() {
+            console.log('Running client-side validation tests...');
+            
+            const tests = [
+                testValidSpecialization,
+                testInvalidSpecialization,
+                testInvalidEffectType,
+                testInvalidEffectScope,
+                testEmptyStrings,
+                testWrongDataTypes,
+                testValidationErrors
+            ];
+            
+            let passed = 0;
+            let total = tests.length;
+            
+            tests.forEach(test => {
+                if (test()) {
+                    passed++;
+                }
+            });
+            
+            const summary = document.createElement('div');
+            summary.className = `test-result ${passed === total ? 'pass' : 'fail'}`;
+            summary.innerHTML = `<strong>Test Summary:</strong> ${passed}/${total} tests passed`;
+            testResults.appendChild(summary);
+            
+            console.log(`Client-side validation tests: ${passed}/${total} passed`);
+        }
+
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', runAllTests);
+    </script>
+</body>
+</html> 

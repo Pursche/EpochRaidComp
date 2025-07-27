@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epoch Raid Composition Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Epoch Raid Composition Planner</h1>
+        <p>Very Work in Progress, talk to Pursche in the Epoch Discord for fixes and suggestions</p>
+        <div class="header-controls">
+            <button id="save-composition-btn" class="header-btn save-btn" title="Save current composition">
+                💾 Save
+            </button>
+            <button id="load-composition-btn" class="header-btn load-btn" title="Load saved composition">
+                📂 Load
+            </button>
+            <button id="clear-composition-btn" class="header-btn clear-btn" title="Clear all slots">
+                🗑️ Clear
+            </button>
+            <button id="clear-saved-btn" class="header-btn clear-saved-btn" title="Delete saved composition">
+                🗑️ Delete
+            </button>
+            <span id="header-status" class="header-status">No composition saved</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Specialization Display Section -->
+        <section id="specializations-section">
+            <h2>Available Specializations</h2>
+            <div id="specializations-container">
+                <!-- Specializations will be dynamically loaded here -->
+                <p>Loading specializations...</p>
+            </div>
+        </section>
+
+        <!-- Group Management Section -->
+        <section id="groups-section">
+            <h2>Raid Groups</h2>
+            <div id="groups-container">
+                <!-- 8 groups with 5 slots each will be created here -->
+                <p>Loading groups...</p>
+            </div>
+        </section>
+
+        <!-- Raid Effects Tracking Section -->
+        <section id="effects-section">
+            <h2>Raid Effects</h2>
+            <div id="effects-container">
+                <!-- Raid-wide effects will be displayed here -->
+                <p>Loading effects...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WoW Raid Composition Planner</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/specialization-validator.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html> 

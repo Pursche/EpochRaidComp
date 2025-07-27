@@ -1,0 +1,56 @@
+{
+  "name": "Arms Warrior",
+  "class": "Warrior",
+  "icon_path": "icons/warrior/arms.png",
+  "effects": [
+    {
+      "name": "Battle Shout",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases melee attack power by 44",
+      "icon_path": "icons/effects/battle_shout.png"
+    },
+    {
+      "name": "Commanding Shout",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases maximum health by 520.",
+      "icon_path": "icons/effects/commanding_shout.png"
+    },
+    {
+      "name": "Demoralizing Shout",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Reduces melee attack power by 81",
+      "icon_path": "icons/effects/demoralizing_shout.png"
+    },
+    {
+      "name": "Intimidating Shout",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Up to 5 total nearby enemies will flee in fear. Lasts 8 seconds.",
+      "icon_path": "icons/effects/intimidating_shout.png"
+    },
+    {
+      "name": "Mortal Strike",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Reduces the effectiveness of any healing by 50%",
+      "icon_path": "icons/effects/mortal_strike.png"
+    },
+    {
+      "name": "Thunder Clap",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Increases the time between attacks by 10%",
+      "icon_path": "icons/effects/thunder_clap.png"
+    },
+    {
+      "name": "Interrupt",
+      "type": "other",
+      "scope": "raid",
+      "description": "Interrupts spell casting",
+      "icon_path": "icons/effects/kick.png"
+    }
+  ]
+} 

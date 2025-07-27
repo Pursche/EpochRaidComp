@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WoW Specialization Schema",
+  "description": "Schema for World of Warcraft specialization JSON files",
+  "type": "object",
+  "required": ["name", "class", "icon_path", "effects"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the specialization (e.g., 'Holy Paladin', 'Arms Warrior')",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "class": {
+      "type": "string",
+      "description": "The class name (e.g., 'Paladin', 'Warrior', 'Priest')",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "icon_path": {
+      "type": "string",
+      "description": "Path to the specialization icon file",
+      "pattern": "^icons/[a-zA-Z0-9_-]+\\.(png|jpg|jpeg|svg)$",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "effects": {
+      "type": "array",
+      "description": "Array of effects provided by this specialization",
+      "minItems": 0,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "scope", "description"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the effect (e.g., 'Blessing of Kings', 'Battle Shout')",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of effect",
+            "enum": ["buff", "debuff", "other"]
+          },
+          "scope": {
+            "type": "string", 
+            "description": "Scope of the effect",
+            "enum": ["raid", "group"]
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of what the effect does",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "Holy Paladin",
+      "class": "Paladin",
+      "icon_path": "icons/holy_paladin.png",
+      "effects": [
+        {
+          "name": "Blessing of Kings",
+          "type": "buff",
+          "scope": "raid",
+          "description": "Increases all stats by 10%"
+        },
+        {
+          "name": "Concentration Aura",
+          "type": "other",
+          "scope": "group",
+          "description": "Reduces spell pushback by 35%"
+        }
+      ]
+    }
+  ]
+} 

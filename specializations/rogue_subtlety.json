@@ -1,0 +1,42 @@
+{
+  "name": "Subtlety Rogue",
+  "class": "Rogue",
+  "icon_path": "icons/rogue/subtlety.png",
+  "effects": [
+    {
+      "name": "Expose Armor",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Reduces armor by 420",
+      "icon_path": "icons/effects/expose_armor.png"
+    },
+    {
+      "name": "Crippling Poison",
+      "type": "other",
+      "scope": "raid",
+      "description": "Coats a weapon with poison that lasts for 1 hour. Each strike has a 30% chance of poisoning the enemy, slowing their movement speed by 70% for 12 seconds.",
+      "icon_path": "icons/effects/crippling_poison.png"
+    },
+    {
+      "name": "Mind-numbing Poision",
+      "type": "other",
+      "scope": "raid",
+      "description": "Coats a weapon with poison that lasts for 1 hour. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 60% for 14 seconds.",
+      "icon_path": "icons/effects/mind_numbing_poison.png"
+    },
+    {
+      "name": "Wound Poision",
+      "type": "other",
+      "scope": "raid",
+      "description": "Coats a weapon with poison that lasts for 1 hour. Each strike has a 30% chance of poisoning the enemy, causing 53 Nature damage and reducing all healing effects used on them by 10% for 15 seconds. Stacks up to 5 times on a single target.",
+      "icon_path": "icons/effects/wound_poison.png"
+    },
+    {
+      "name": "Interrupt",
+      "type": "other",
+      "scope": "raid",
+      "description": "Interrupts spellcasting",
+      "icon_path": "icons/effects/kick.png"
+    }
+  ]
+} 
