@@ -4,10 +4,10 @@
   "icon_path": "raidicons/rogue/assassination.png",
   "effects": [
     {
-      "name": "Expose Armor",
+      "name": "Improved Expose Armor",
       "type": "debuff",
       "scope": "raid",
-      "description": "Reduces armor by 420",
+      "description": "Reduces armor by 630",
       "icon_path": "raidicons/effects/expose_armor.png"
     },
     {

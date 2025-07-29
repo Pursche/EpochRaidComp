@@ -32,27 +32,6 @@
       "icon_path": "raidicons/effects/fear_ward.png"
     },
     {
-      "name": "Pain Supression",
-      "type": "buff",
-      "scope": "raid",
-      "description": "Instantly reduces a friendly target's threat by 5%, reduces all damage taken by 40% and increases resistance to Dispel mechanics by 65% for 8 seconds.",
-      "icon_path": "raidicons/effects/pain_suppression.png"
-    },
-    {
-      "name": "Power Infusion",
-      "type": "buff",
-      "scope": "raid",
-      "description": "Infuses the target with power, increasing spell casting speed by 20% and reducing the mana cost of all spells by 20%. Lasts 15 seconds.",
-      "icon_path": "raidicons/effects/power_infusion.png"
-    },
-    {
-      "name": "Power Word: Barrier",
-      "type": "other",
-      "scope": "raid",
-      "description": "Create a barrier around you, absorbing damage dealt to all party and raid members within it. The barrier lasts for 10 seconds or until it absorbs 5962 damage, increased by up to 250% when affecting a large group. Priest must channel to maintain the spell.",
-      "icon_path": "raidicons/effects/power_word_barrier.png"
-    },
-    {
       "name": "Mana Burn",
       "type": "other",
       "scope": "raid",

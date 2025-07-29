@@ -7,21 +7,21 @@
       "name": "Blessing of Kings",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases attack power by 155",
+      "description": "Increases total stats by 10%",
       "icon_path": "raidicons/effects/blessing_of_kings.png"
     },
     {
-      "name": "Blessing of Might",
+      "name": "Improved Blessing of Might",
       "type": "buff",
       "scope": "raid",
-      "description": "Restores 30 mana every 5 seconds",
-      "icon_path": "raidicons/effects/blessing_of_wisdom.png"
+      "description": "Increases attack power by 186",
+      "icon_path": "raidicons/effects/blessing_of_might.png"
     },
     {
-      "name": "Blessing of Wisdom",
+      "name": "Improved Blessing of Wisdom",
       "type": "buff",
       "scope": "raid",
-      "description": "Restores 30 mana every 5 seconds",
+      "description": "Restores 36 mana every 5 seconds",
       "icon_path": "raidicons/effects/blessing_of_wisdom.png"
     },
     {
@@ -60,10 +60,10 @@
       "icon_path": "raidicons/effects/hand_of_protection.png"
     },
     {
-      "name": "Devotion Aura",
+      "name": "Improved Devotion Aura",
       "type": "buff",
       "scope": "raid",
-      "description": "Gives ?? additional armor",
+      "description": "Gives ?? + 40% additional armor",
       "icon_path": "raidicons/effects/devotion_aura.png"
     },
     {

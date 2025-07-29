@@ -25,10 +25,10 @@
       "icon_path": "raidicons/effects/curse_of_recklessness.png"
     },
     {
-      "name": "Curse of the Elements",
+      "name": "Improved Curse of the Elements",
       "type": "debuff",
       "scope": "raid",
-      "description": "Curses the target for 300 seconds, reducing Nature, Arcane, Fire, Frost, and Shadow resistances by 75 and increasing Nature, Arcane, Fire, Frost, and Shadow damage taken by 10%. Only one Curse per Warlock can be active on any one target.",
+      "description": "Curses the target for 300 seconds, reducing Nature, Arcane, Fire, Frost, and Shadow resistances by 75 and increasing Nature, Arcane, Fire, Frost, and Shadow damage taken by 13%. Only one Curse per Warlock can be active on any one target.",
       "icon_path": "raidicons/effects/curse_of_the_elements.png"
     },
     {

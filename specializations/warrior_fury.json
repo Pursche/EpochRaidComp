@@ -4,17 +4,17 @@
   "icon_path": "raidicons/warrior/fury.png",
   "effects": [
     {
-      "name": "Battle Shout",
+      "name": "Improved Battle Shout",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases melee attack power by 44",
+      "description": "Increases melee attack power by 50",
       "icon_path": "raidicons/effects/battle_shout.png"
     },
     {
-      "name": "Commanding Shout",
+      "name": "Improved Commanding Shout",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases maximum health by 520.",
+      "description": "Increases maximum health by 598.",
       "icon_path": "raidicons/effects/commanding_shout.png"
     },
     {

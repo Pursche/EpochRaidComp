@@ -149,6 +149,13 @@
       "scope": "raid",
       "description": "Increases melee attack power by 95",
       "icon_path": "raidicons/effects/unleashed_rage.png"
+    },
+    {
+      "name": "Stormstrike",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Increases nature damage taken by 5%",
+      "icon_path": "raidicons/effects/stormstrike.png"
     }
   ]
 } 
