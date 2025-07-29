@@ -46,17 +46,17 @@
       "icon_path": "raidicons/effects/frost_resistance_totem.png"
     },
     {
-      "name": "Stoneskin Totem",
+      "name": "Improved Stoneskin Totem",
       "type": "buff",
       "scope": "raid",
-      "description": "Reduces melee damage taken by 30",
+      "description": "Reduces melee damage taken by 36",
       "icon_path": "raidicons/effects/stoneskin_totem.png"
     },
     {
-      "name": "Windwall Totem",
+      "name": "Improved Windwall Totem",
       "type": "buff",
       "scope": "raid",
-      "description": "Reduces ranged damage taken by 64",
+      "description": "Reduces ranged damage taken by 76",
       "icon_path": "raidicons/effects/windwall_totem.png"
     },
     {
@@ -81,10 +81,10 @@
       "icon_path": "raidicons/effects/flametongue_totem.png"
     },
     {
-      "name": "Mana Spring Totem",
+      "name": "Improved Mana Spring Totem",
       "type": "buff",
       "scope": "raid",
-      "description": "Restores 17 mana every 2 seconds",
+      "description": "Restores 21 mana every 2 seconds",
       "icon_path": "raidicons/effects/mana_spring_totem.png"
     },
     {

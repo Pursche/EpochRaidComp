@@ -58,6 +58,20 @@
       "scope": "raid",
       "description": "Put target to sleep for 12 seconds",
       "icon_path": "raidicons/effects/wyvern_sting.png"
+    },
+    {
+      "name": "Improved Hunter's Mark",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Increases melee and ranged attack power of all attackers by 110 and by an additional 6 for every hit taken up to 180 (290 total)",
+      "icon_path": "raidicons/effects/hunters_mark.png"
+    },
+    {
+      "name": "Expose Weakness",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Gives all attackers attack power equal to 25% of the hunter's agility",
+      "icon_path": "raidicons/effects/expose_weakness.png"
     }
   ]
 } 

@@ -11,10 +11,10 @@
       "icon_path": "raidicons/effects/earthbind_totem.png"
     },
     {
-      "name": "Grace of Air Totem",
+      "name": "Improved Grace of Air Totem",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases agility by 54",
+      "description": "Increases agility by 62",
       "icon_path": "raidicons/effects/grace_of_air_totem.png"
     },
     {
@@ -60,24 +60,24 @@
       "icon_path": "raidicons/effects/windwall_totem.png"
     },
     {
-      "name": "Strength of Earth Totem",
+      "name": "Improved Strength of Earth Totem",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases strength by 52",
+      "description": "Increases strength by 59",
       "icon_path": "raidicons/effects/strength_of_earth_totem.png"
     },
     {
-      "name": "Windfury Totem",
+      "name": "Improved Windfury Totem",
       "type": "buff",
       "scope": "raid",
-      "description": "Each hit has a 20% chance of granting the attacker 1 extra attack with 220 extra melee attack power",
+      "description": "Each hit has a 20% chance of granting the attacker 1 extra attack with 286 extra melee attack power",
       "icon_path": "raidicons/effects/windfury_totem.png"
     },
     {
-      "name": "Flametongue Totem",
+      "name": "Improved Flametongue Totem",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases total spell damage by 34",
+      "description": "Increases total spell damage by 38",
       "icon_path": "raidicons/effects/flametongue_totem.png"
     },
     {
@@ -142,6 +142,13 @@
       "scope": "raid",
       "description": "Dispells disease",
       "icon_path": "raidicons/effects/dispell_disease.png"
+    },
+    {
+      "name": "Unleashed Rage",
+      "type": "buff",
+      "scope": "raid",
+      "description": "Increases melee attack power by 95",
+      "icon_path": "raidicons/effects/unleashed_rage.png"
     }
   ]
 } 

@@ -4,10 +4,10 @@
   "icon_path": "raidicons/druid/restoration.png",
   "effects": [
     {
-      "name": "Thorns",
+      "name": "Improved Thorns",
       "type": "buff",
       "scope": "raid",
-      "description": "18 Nature damage to attackers when hit",
+      "description": "31 Nature damage to attackers when hit",
       "icon_path": "raidicons/effects/thorns.png"
     },
     {
@@ -65,6 +65,13 @@
       "scope": "raid",
       "description": "Heals up to 5 injured allies within your party or raid group for 1097 every 2 seconds seconds for 8 seconds. Druid must channel to maintain the spell",
       "icon_path": "raidicons/effects/tranquility.png"
+    },
+    {
+      "name": "Tree of Life",
+      "type": "buff",
+      "scope": "group",
+      "description": "Healing received by 25% of the druids total Spirit",
+      "icon_path": "raidicons/effects/tree_of_life.png"
     },
     {
       "name": "Dispell Curse",

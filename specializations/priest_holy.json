@@ -11,10 +11,10 @@
       "icon_path": "raidicons/effects/divine_spirit.png"
     },
     {
-      "name": "Power Word: Fortitude",
+      "name": "Improved Power Word: Fortitude",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases Stamina by 54",
+      "description": "Increases Stamina by 70",
       "icon_path": "raidicons/effects/power_word_fortitude.png"
     },
     {

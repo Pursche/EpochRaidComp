@@ -4,10 +4,10 @@
   "icon_path": "raidicons/priest/discipline.png",
   "effects": [
     {
-      "name": "Divine Spirit",
+      "name": "Improved Divine Spirit",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases Spirit by 30",
+      "description": "Increases Spirit by 40 and increases spell damage and healing by 10% of spirit",
       "icon_path": "raidicons/effects/divine_spirit.png"
     },
     {

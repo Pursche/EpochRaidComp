@@ -4,10 +4,10 @@
   "icon_path": "raidicons/druid/balance.png",
   "effects": [
     {
-      "name": "Thorns",
+      "name": "Improved Thorns",
       "type": "buff",
       "scope": "raid",
-      "description": "18 Nature damage to attackers when hit",
+      "description": "31 Nature damage to attackers when hit",
       "icon_path": "raidicons/effects/thorns.png"
     },
     {

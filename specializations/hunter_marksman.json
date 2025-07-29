@@ -65,6 +65,13 @@
       "scope": "raid",
       "description": "60% slow to all enemies within 10 yards",
       "icon_path": "raidicons/effects/frost_trap.png"
+    },
+    {
+      "name": "Improved Hunter's Mark",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Increases melee and ranged attack power of all attackers by 110 and by an additional 6 for every hit taken up to 180 (290 total)",
+      "icon_path": "raidicons/effects/hunters_mark.png"
     }
   ]
 } 

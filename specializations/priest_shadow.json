@@ -11,10 +11,10 @@
       "icon_path": "raidicons/effects/divine_spirit.png"
     },
     {
-      "name": "Power Word: Fortitude",
+      "name": "Improved Power Word: Fortitude",
       "type": "buff",
       "scope": "raid",
-      "description": "Increases Stamina by 54",
+      "description": "Increases Stamina by 70",
       "icon_path": "raidicons/effects/power_word_fortitude.png"
     },
     {
@@ -104,16 +104,23 @@
     {
       "name": "Vampiric Embrace",
       "type": "debuff",
-      "scope": "raid",
+      "scope": "group",
       "description": "Afflicts your target with Shadow energy that causes all party members to be healed for 15% of any Shadow spell damage you deal for 60 seconds.",
       "icon_path": "raidicons/effects/vampiric_embrace.png"
     },
     {
       "name": "Vampiric Touch",
       "type": "debuff",
-      "scope": "raid",
+      "scope": "group",
       "description": "Causes all party members to gain mana equal to 5% of any Shadow spell damage you deal.",
       "icon_path": "raidicons/effects/vampiric_touch.png"
+    },
+    {
+      "name": "Misery",
+      "type": "debuff",
+      "scope": "raid",
+      "description": "Increase spell damage taken by 5%",
+      "icon_path": "raidicons/effects/misery.png"
     }
   ]
 } 
